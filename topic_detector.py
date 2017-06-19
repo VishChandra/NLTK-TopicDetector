@@ -96,12 +96,6 @@ class TopicDetector(object):
         data = ', '.join(words)
         return data
 
-    def normalize_data(self, words):
-        document = re.sub('[^A-Za-z .-]+', ' ', words)
-        document = ' '.join(document.split())
-        document = ' '.join([i for i in document.split() if i not in stop])
-        return document
-
     def download_file(self, url):
         r = requests.get(url)
         soup = BeautifulSoup(r.text, 'html.parser')
