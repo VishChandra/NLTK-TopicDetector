@@ -15,15 +15,12 @@ class TopicDetector(object):
     def grammar(self):
         grammar = r"""
                         NOUNS:
-                            {<NN.*|JJ>*<NN.*>}
+                            {<NN>}
+                            {<NNS>}
                             {<NN>+<NN>}
                             {<NNI>+<NN>}
                             {<JJ>+<NN>}
                             {<NNP>+<NNP>}
-                            {<DT|NN>+}
-                            {<DT><JJ><NN>}
-                            {<NN>}
-                            {<NNS>}
                             {<NNP>}
                             {<NNPS>}
                         """
