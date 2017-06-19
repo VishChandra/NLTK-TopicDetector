@@ -86,9 +86,10 @@ class TopicDetector(object):
 
     def most_freq(self, words):
         content = pos_tag(words)
-        nouns = [w[0] for w in content if w[1] == "NN" or w[1] == "NNS"]
-        freq = FreqDist(nouns)
-        content = [w[0] for w in freq.most_common(7) if len(w[0]) > 3]
+        freq_nouns = [w[0] for w in content if w[1] == "NN"]
+        print(freq_nouns)
+        freq = FreqDist(freq_nouns)
+        content = [w[0] for w in freq.most_common(7) if w[0] not in stopwords.words('english')]
         content = self.readable(content)
         return content
 
