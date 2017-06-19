@@ -1,8 +1,12 @@
 # NLTK-TopicDetector
-========================================================
+
+====================
+
 A simple program to extract main topics from an article.
 
 ### Features
+
+------------
 
 • The program asks user to input content of an article by manually entering text, providing URL, or the text file. 
 
@@ -15,6 +19,8 @@ A simple program to extract main topics from an article.
 • Shows the Main Topic of an article. 
 
 ### Requirements: 
+
+-----------------
 
 • Python 3.6.0 
 
