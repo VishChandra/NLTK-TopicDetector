@@ -6,7 +6,7 @@ A simple program to extract main topics from an article.
 
 
 
-### Features
+### Features:
 
 
 
